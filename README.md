@@ -7,8 +7,6 @@
 [![Build Status](https://travis-ci.org/namshi/dollar-dom.svg?branch=master)](https://travis-ci.org/namshi/dollar-dom)
 [![Open Source Namshi](https://img.shields.io/badge/open--source-Namshi-blue.svg)](https://github.com/namshi)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
-[![codecov](https://codecov.io/gh/namshi/dollar-dom/branch/master/graph/badge.svg)](https://codecov.io/gh/namshi/dollar-dom)
-
 
 <hr>
 
@@ -84,9 +82,9 @@ and will be available as a global object named **`dollarDom`** in the browser.
 
 ### __`$`__
 
-- Create DOM from string:
+- **Create DOM from string:**
 
-  Generating DOM from string is pretty easy.
+  Generating DOM from string is simple.
 
   ```js
   let newEl = $(`
@@ -107,7 +105,7 @@ and will be available as a global object named **`dollarDom`** in the browser.
   document.body.appendChild(newEl);
   ```
 
-- Single element selector ( same as querySelector ):
+- **Single element selector ( same as querySelector ):**
   
   Let's try to find the element from the DOM we just created.
 
@@ -127,7 +125,7 @@ and will be available as a global object named **`dollarDom`** in the browser.
   let child = $('.child', listElement);
   console.log( child.tagName ) // logs 'LI'
   ```
-- Multiple elements selector ( same as querySelectorAll ):
+- **Multiple elements selector ( same as querySelectorAll ):**
 
   ```js
   let children = $('.child');
@@ -142,7 +140,7 @@ and will be available as a global object named **`dollarDom`** in the browser.
   });
   ```
 
-- Difference between a collection and a single element selector:
+- **Difference between a collection and a single element selector:**
 
   By default, `$` returns a collection. But you can call any DOM element method on it, and it will be applied on the 
   first element of the collection. However, if you call the `on` method ( which is dollarDOM specific ), it will be applied on all elements in the collection -- You can see that more in the `on` section.
@@ -165,7 +163,7 @@ and will be available as a global object named **`dollarDom`** in the browser.
 
 ### __`on`__
 
-- Attach event handler
+- **Attach event handler:**
 
   `$` makes attaching the event handler a lot easy. If you're coming from the jQuery world, there won't be any surprices.
 
@@ -177,7 +175,7 @@ and will be available as a global object named **`dollarDom`** in the browser.
   });
   ```
 
-- Remove event handler
+- **Remove event handler:**
 
   The output of the `on` method is a function which can be used to remove the attached event handlers.
 
@@ -190,7 +188,7 @@ and will be available as a global object named **`dollarDom`** in the browser.
   removeListeners();
   ```
 
-- Event Delegation example
+- **Event Delegation example:**
 
   In the above examples, the 'click' event will be attached in each `.child` element. This is not performance friendly. DollarDOM has built-in event delegation support ( The syntax is similar to jQuery event delegation ). 
 
@@ -203,7 +201,7 @@ and will be available as a global object named **`dollarDom`** in the browser.
 
 ### __`get`__
 
-- Get the element from collection:
+- **Get the element from collection:**
 
   `get` is a utility method to get a single element from the collection. It accept an `index` argument and the element in that position will be returned. 
 
