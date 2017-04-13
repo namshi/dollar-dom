@@ -74,7 +74,7 @@ const {$} = require('dollar-dom');
 
 If you wish to include as a script, DollarDOM can be included like this:
 
-    unpkg.com/...
+    <script src="https://unpkg.com/dollar-dom@1.0.0/build/dollar-dom.min.js"></script>
 
 and will be available as a global object named **`dollarDom`** in the browser.
 
