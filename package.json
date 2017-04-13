@@ -1,6 +1,6 @@
 {
   "name": "dollar-dom",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "main": "./build/dollar-dom.min.js",
   "license": "MIT",
   "scripts": {
