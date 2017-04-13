@@ -41,21 +41,7 @@ const $ = (args, parent) => {
   );
 
   let firstElem = collection[0];
-  
-  Object.defineProperties(collection, {
-    'get': {
-      value: function(index){
-        return collection[index];
-      }
-    },
-    'on': {
-      value: function(...args){
-        return on(firstElem, ...args);
-      }
-    }
-  })
-
-  for(let prop in collection[0]){
+  for(let prop in firstElem){
     Object.defineProperty(collection, prop, 
       typeof firstElem[prop] === 'function' ?
       {
@@ -71,6 +57,23 @@ const $ = (args, parent) => {
       }
     )
   }
+
+  Object.defineProperties(collection, {
+    'get': {
+      value: function(index){
+        return collection[index];
+      }
+    },
+    'on': {
+      value: function(...args){
+        let removeHandlers = collection.map(elem => on(elem, ...args));
+        return () => {
+          removeHandlers.forEach(fn => fn());
+        };
+      }
+    }
+  })
+
   return collection;
 };
 
