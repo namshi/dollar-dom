@@ -1,24 +1,45 @@
 {
   "name": "dollar-dom",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "main": "./build/dollar-dom.min.js",
   "license": "MIT",
   "scripts": {
-    "test": "ava",
-    "test-w": "ava --watch",
+    "test": "ava --verbose",
+    "test-w": "ava --watch --verbose",
     "build": "rollup -c"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/namshi/dollar-dom.git"
+  },
+  "keywords": [
+    "dom",
+    "dollar-dom",
+    "dom utility",
+    "querySelector",
+    "querySelectoAll",
+    "qsa",
+    "addEventListener",
+    "generate dom"
+  ],
+  "contributors": [
+    {
+      "name": "Shidhin C R",
+      "email": "shidhincr@gmail.com"
+    }
+  ],
+  "files": [
+    "README.md",
+    "build/"
+  ],
+  "bugs": {
+    "url": "https://github.com/namshi/dollar-dom/issues"
+  },
+  "homepage": "https://github.com/namshi/dollar-dom/#readme",
   "ava": {
     "require": [
-      "babel-register",
-      "./test/helpers/setup-browser-env.js"
-    ],
-    "babel": {
-      "babelrc": true,
-      "presets": [
-        "@ava/stage-4"
-      ]
-    }
+      "./test/helpers/setup.js"
+    ]
   },
   "dependencies": {},
   "devDependencies": {

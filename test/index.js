@@ -1,6 +1,10 @@
 import test from 'ava';
-import $dom from '../';
+import $dom from '../index';
 const {$, on} = $dom;
+
+test.beforeEach(t => {
+  document.body.innerHTML = '';
+});
 
 test('module exist and sane', t => {
   t.truthy(typeof $dom === 'object','Module doesnt exist');
@@ -79,6 +83,24 @@ test('it can attach event handlers', t => {
   removeHandler();
   elem.click();
   t.is(counter, 2);
+});
+
+test('it can attach event handlers to all elements', t => {
+  document.body.appendChild($(`
+  <div class="parent">
+    <div class="c-event">1</div>
+    <div class="c-event">2</div>
+  </div>
+  `));
+  let elem = $('.c-event');
+  let counter = 0;
+  let removeHandler = elem.on('click', function() {
+    counter += Number(this.textContent);
+  });
+  elem.click();
+  t.is(counter, 1);
+  elem.get(1).click();
+  t.is(counter, 3);
 });
 
 test('it can do event delegation', t => {
