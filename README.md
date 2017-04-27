@@ -1,7 +1,6 @@
 <h1 width="100%"  align="middle">💲DOM</h1>
 
-<img src="https://raw.githubusercontent.com/namshi/dollar-dom/master/dollar-symbol.svg" height="150" width="100%" align="middle"/>
-
+<img src="https://cdn.rawgit.com/namshi/dollar-dom/master/dollar-symbol.svg" height="150" width="100%" align="middle"/>
 
 > 👬 A Friendly wrapper for your favourite DOM Apis ✨ in **800 bytes** ( minified + gzipped ) 🙌
 
