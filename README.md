@@ -1,4 +1,7 @@
-# 💲DollarDOM
+<h1 width="100%"  align="middle">💲DOM</h1>
+
+<img src="https://raw.githubusercontent.com/namshi/dollar-dom/master/dollar-symbol.svg" height="150" width="100%" align="middle"/>
+
 
 > 👬 A Friendly wrapper for your favourite DOM Apis ✨ in **800 bytes** ( minified + gzipped ) 🙌
 
@@ -74,7 +77,7 @@ const {$} = require('dollar-dom');
 
 If you wish to include as a script, DollarDOM can be included like this:
 
-    <script src="https://unpkg.com/dollar-dom@1.0.0/build/dollar-dom.min.js"></script>
+    <script src="https://unpkg.com/dollar-dom/build/dollar-dom.min.js"></script>
 
 and will be available as a global object named **`dollarDom`** in the browser.
 
@@ -228,3 +231,7 @@ We love contributions from everyone.
 ## Licence
 
 MIT @ [Namshi.com](tech.namshi.com)
+
+#### Image Credits
+
+_<div>Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>_
