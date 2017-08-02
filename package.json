@@ -2,6 +2,7 @@
   "name": "dollar-dom",
   "version": "1.0.1",
   "main": "./build/dollar-dom.min.js",
+  "description": "👬 A Friendly wrapper for your favourite DOM Apis ✨ in **800 bytes** ( minified + gzipped )",
   "license": "MIT",
   "scripts": {
     "test": "ava --verbose",
