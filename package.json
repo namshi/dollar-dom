@@ -1,6 +1,6 @@
 {
   "name": "dollar-dom",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "main": "./build/dollar-dom.min.js",
   "description": "👬 A Friendly wrapper for your favourite DOM Apis ✨ in **800 bytes** ( minified + gzipped )",
   "license": "MIT",
